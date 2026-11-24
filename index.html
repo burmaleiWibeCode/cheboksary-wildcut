@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WildCut — барбершоп на проспекте Ленина, Чебоксары</title>
+<meta name="description" content="WildCut — мужской барбершоп в Чебоксарах: стрижки от 500 ₽, оформление бороды, тонирование. Просп. Ленина, 31. Ежедневно 10:00–20:00.">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: { coal:'#0B0B0B', steel:'#161616', line:'#2B2B2B', bone:'#EDE7DE', signal:'#E23E2B', ash:'#8C8880' },
+      fontFamily: { display:['Oswald','Arial Narrow','sans-serif'], sans:['Inter','system-ui','sans-serif'] }
+    }
+  }
+}
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { background:#0B0B0B; color:#EDE7DE; }
+  .rule { border-color: rgba(237,231,222,.14); }
+  .marquee { display:flex; gap:2rem; white-space:nowrap; animation: slide 28s linear infinite; }
+  @keyframes slide { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  .stripe { background-image: repeating-linear-gradient(135deg, rgba(226,62,43,.9) 0 8px, transparent 8px 16px); }
+  .num { font-variant-numeric: tabular-nums; }
+  .option { transition: all .15s ease; }
+  .option[aria-pressed="true"] { background:#E23E2B; border-color:#E23E2B; color:#0B0B0B; }
+  .option[aria-pressed="true"] .price { color:#0B0B0B; }
+  .photo { filter: grayscale(.55) contrast(1.08); transition: filter .4s ease; }
+  .photo:hover { filter: grayscale(0) contrast(1.02); }
+</style>
+</head>
+<body class="font-sans antialiased">
+
+<header class="sticky top-0 z-40 border-b rule bg-coal/90 backdrop-blur">
+  <div class="mx-auto flex max-w-6xl items-center justify-between px-5 py-3">
+    <a href="#top" class="font-display text-xl font-600 tracking-[.3em]">W/C</a>
+    <nav class="hidden gap-6 text-[11px] uppercase tracking-[.22em] text-bone/60 md:flex">
+      <a href="#services" class="hover:text-signal">Услуги</a>
+      <a href="#calc" class="hover:text-signal">Калькулятор</a>
+      <a href="#work" class="hover:text-signal">Работы</a>
+      <a href="#contacts" class="hover:text-signal">Контакты</a>
+    </nav>
+    <a href="tel:+78352215862" class="font-display text-[13px] tracking-[.14em] text-bone/80 hover:text-signal">+7 (8352) 21-58-62</a>
+  </div>
+</header>
+
+<main id="top">
+  <!-- HERO -->
+  <section class="mx-auto grid max-w-6xl gap-8 px-5 pt-8 pb-12 md:grid-cols-[1.15fr_.85fr] md:items-center md:gap-12 md:pt-14">
+    <div>
+      <p class="flex items-center gap-3 text-[10px] uppercase tracking-[.3em] text-ash">
+        <span class="inline-block h-2 w-2 bg-signal"></span> Чебоксары · просп. Ленина, 31
+      </p>
+      <h1 class="mt-4 font-display text-[52px] font-600 uppercase leading-[.9] tracking-tight sm:text-7xl md:text-[86px]">
+        Стрижка<br>
+        <span class="text-signal">без лишних</span><br>
+        слов
+      </h1>
+      <p class="mt-5 max-w-md text-[14px] leading-relaxed text-bone/65">
+        Мужской барбершоп, где сначала спрашивают про укладку и форму лица, а потом берут машинку.
+        Стрижка — от 500 ₽, борода — 800 ₽. Работаем каждый день с 10:00 до 20:00.
+      </p>
+      <div class="mt-7 flex flex-wrap items-center gap-3">
+        <a href="#calc" class="bg-signal px-7 py-3 font-display text-[13px] uppercase tracking-[.18em] text-coal hover:bg-bone">Собрать стрижку</a>
+        <a href="https://vk.ru/wildcut21" target="_blank" rel="noopener" class="border border-bone/25 px-7 py-3 font-display text-[13px] uppercase tracking-[.18em] hover:border-signal hover:text-signal">Записаться в ВК</a>
+      </div>
+      <dl class="mt-8 grid max-w-md grid-cols-3 gap-4 border-t rule pt-5">
+        <div><dt class="text-[10px] uppercase tracking-[.2em] text-ash">Рейтинг</dt><dd class="num font-display text-2xl">5,0</dd></div>
+        <div><dt class="text-[10px] uppercase tracking-[.2em] text-ash">Отзывов</dt><dd class="num font-display text-2xl">282</dd></div>
+        <div><dt class="text-[10px] uppercase tracking-[.2em] text-ash">Кешбэк</dt><dd class="num font-display text-2xl">5%</dd></div>
+      </dl>
+    </div>
+
+    <figure class="relative">
+      <img src="https://avatars.mds.yandex.net/get-altay/22604145/2a000001a126d24c06ad8a96eee893be088a/XXXL"
+           alt="Барбершоп WildCut в Чебоксарах" class="photo aspect-[4/5] w-full object-cover">
+      <figcaption class="absolute bottom-0 left-0 right-0 flex items-end justify-between gap-3 bg-gradient-to-t from-coal via-coal/70 to-transparent p-4">
+        <span class="text-[10px] uppercase tracking-[.24em] text-bone/70">Рабочий день в WildCut</span>
+        <span class="font-display text-3xl leading-none">от 500 ₽</span>
+      </figcaption>
+    </figure>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="overflow-hidden border-y rule py-3">
+    <div class="marquee font-display text-sm uppercase tracking-[.3em] text-bone/40">
+      <span>Первый мужской барбершоп Чебоксар</span><span class="text-signal">✦</span>
+      <span>Стрижка · Борода · Тонирование</span><span class="text-signal">✦</span>
+      <span>Кешбэк 5% на карту гостя</span><span class="text-signal">✦</span>
+      <span>Первый мужской барбершоп Чебоксар</span><span class="text-signal">✦</span>
+      <span>Стрижка · Борода · Тонирование</span><span class="text-signal">✦</span>
+      <span>Кешбэк 5% на карту гостя</span><span class="text-signal">✦</span>
+    </div>
+  </div>
+
+  <!-- SERVICES -->
+  <section id="services" class="mx-auto max-w-6xl px-5 py-14">
+    <div class="mb-8 flex flex-wrap items-end justify-between gap-4">
+      <h2 class="font-display text-4xl uppercase tracking-tight md:text-5xl">Прайс</h2>
+      <p class="max-w-xs text-[12px] leading-relaxed text-ash">Цены из открытого прайса барбершопа. Время и мастера уточняйте при записи.</p>
+    </div>
+
+    <div class="border-t rule">
+      <div class="group flex items-center justify-between border-b rule py-4 hover:bg-steel">
+        <div>
+          <p class="font-display text-lg uppercase tracking-wide">Стрижка</p>
+          <p class="text-[12px] text-ash">Мастер · 45 минут</p>
+        </div>
+        <p class="num font-display text-2xl">от 500 ₽</p>
+      </div>
+      <div class="group flex items-center justify-between border-b rule py-4 hover:bg-steel">
+        <div>
+          <p class="font-display text-lg uppercase tracking-wide">Стрижка у Олега</p>
+          <p class="text-[12px] text-ash">Старший барбер</p>
+        </div>
+        <p class="num font-display text-2xl">700 ₽</p>
+      </div>
+      <div class="group flex items-center justify-between border-b rule py-4 hover:bg-steel">
+        <div>
+          <p class="font-display text-lg uppercase tracking-wide">Стрижка у Савелия</p>
+          <p class="text-[12px] text-ash">Топ-барбер</p>
+        </div>
+        <p class="num font-display text-2xl">1 000 ₽</p>
+      </div>
+      <div class="group flex items-center justify-between border-b rule py-4 hover:bg-steel">
+        <div>
+          <p class="font-display text-lg uppercase tracking-wide">Оформление бороды и усов</p>
+          <p class="text-[12px] text-ash">Контур, форма, уход</p>
+        </div>
+        <p class="num font-display text-2xl">800 ₽</p>
+      </div>
+      <div class="group flex items-center justify-between border-b rule py-4 hover:bg-steel">
+        <div>
+          <p class="font-display text-lg uppercase tracking-wide">Тонирование бороды и усов</p>
+          <p class="text-[12px] text-ash">Цвет и плотность</p>
+        </div>
+        <p class="num font-display text-2xl">1 300 ₽</p>
+      </div>
+      <div class="group flex items-center justify-between border-b rule py-4 hover:bg-steel">
+        <div>
+          <p class="font-display text-lg uppercase tracking-wide">Тонирование седины</p>
+          <p class="text-[12px] text-ash">Мягкое перекрытие</p>
+        </div>
+        <p class="num font-display text-2xl">1 500 ₽</p>
+      </div>
+      <div class="group flex items-center justify-between border-b rule py-4 hover:bg-steel">
+        <div>
+          <p class="font-display text-lg uppercase tracking-wide">Стрижка «налысо»</p>
+          <p class="text-[12px] text-ash">Машинка, чистый контур</p>
+        </div>
+        <p class="num font-display text-2xl">900 ₽</p>
+      </div>
+      <div class="group flex items-center justify-between border-b rule py-4 hover:bg-steel">
+        <div>
+          <p class="font-display text-lg uppercase tracking-wide">Отец + сын</p>
+          <p class="text-[12px] text-ash">Две стрижки подряд, 2 часа</p>
+        </div>
+        <p class="num font-display text-2xl">2 000 ₽</p>
+      </div>
+      <div class="group flex items-center justify-between border-b rule py-4 hover:bg-steel">
+        <div>
+          <p class="font-display text-lg uppercase tracking-wide">Детская стрижка</p>
+          <p class="text-[12px] text-ash">Спокойный темп, без спешки</p>
+        </div>
+        <p class="num font-display text-2xl">1 000 ₽</p>
+      </div>
+      <div class="group flex items-center justify-between border-b rule py-4 hover:bg-steel">
+        <div>
+          <p class="font-display text-lg uppercase tracking-wide">Скраб</p>
+          <p class="text-[12px] text-ash">Кожа головы, перед стрижкой</p>
+        </div>
+        <p class="num font-display text-2xl">1 000 ₽</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CALCULATOR -->
+  <section id="calc" class="border-y rule bg-steel">
+    <div class="mx-auto max-w-6xl px-5 py-14">
+      <div class="mb-8 flex flex-wrap items-end justify-between gap-4">
+        <div>
+          <h2 class="font-display text-4xl uppercase tracking-tight md:text-5xl">Собери свою стрижку</h2>
+          <p class="mt-3 max-w-md text-[13px] leading-relaxed text-bone/60">Выберите мастера и добавьте услуги — покажем итог и подготовим сообщение для записи.</p>
+        </div>
+        <a href="https://vk.ru/wildcut21" target="_blank" rel="noopener" class="font-display text-[12px] uppercase tracking-[.2em] text-signal hover:text-bone">Записаться в ВК →</a>
+      </div>
+
+      <div class="grid gap-8 md:grid-cols-[1.4fr_.6fr]">
+        <div class="space-y-7">
+          <div>
+            <p class="mb-3 text-[10px] uppercase tracking-[.26em] text-ash">Мастер</p>
+            <div class="grid gap-2 sm:grid-cols-3">
+              <button class="option border rule p-4 text-left" data-group="master" data-price="500" data-label="Стрижка у мастера" aria-pressed="true">
+                <span class="block font-display text-sm uppercase tracking-wide">Мастер</span>
+                <span class="price mt-1 block font-display text-xl">500 ₽</span>
+              </button>
+              <button class="option border rule p-4 text-left" data-group="master" data-price="700" data-label="Стрижка у Олега" aria-pressed="false">
+                <span class="block font-display text-sm uppercase tracking-wide">Олег</span>
+                <span class="price mt-1 block font-display text-xl">700 ₽</span>
+              </button>
+              <button class="option border rule p-4 text-left" data-group="master" data-price="1000" data-label="Стрижка у Савелия" aria-pressed="false">
+                <span class="block font-display text-sm uppercase tracking-wide">Савелий</span>
+                <span class="price mt-1 block font-display text-xl">1 000 ₽</span>
+              </button>
+            </div>
+          </div>
+
+          <div>
+            <p class="mb-3 text-[10px] uppercase tracking-[.26em] text-ash">Добавить</p>
+            <div class="flex flex-wrap gap-2">
+              <button class="option border rule px-4 py-3 text-[13px]" data-price="800" data-label="Оформление бороды" aria-pressed="false">Борода · 800 ₽</button>
+              <button class="option border rule px-4 py-3 text-[13px]" data-price="1300" data-label="Тонирование бороды" aria-pressed="false">Тонирование бороды · 1 300 ₽</button>
+              <button class="option border rule px-4 py-3 text-[13px]" data-price="1500" data-label="Тонирование седины" aria-pressed="false">Седины · 1 500 ₽</button>
+              <button class="option border rule px-4 py-3 text-[13px]" data-price="1000" data-label="Скраб" aria-pressed="false">Скраб · 1 000 ₽</button>
+              <button class="option border rule px-4 py-3 text-[13px]" data-price="1000" data-label="Детская стрижка" aria-pressed="false">Детская · 1 000 ₽</button>
+              <button class="option border rule px-4 py-3 text-[13px]" data-price="2000" data-label="Отец и сын" aria-pressed="false">Отец + сын · 2 000 ₽</button>
+            </div>
+          </div>
+        </div>
+
+        <aside class="border rule p-5">
+          <p class="text-[10px] uppercase tracking-[.26em] text-ash">Смета</p>
+          <ul id="calcList" class="mt-4 space-y-2 text-[13px] text-bone/75"></ul>
+          <div class="mt-4 flex items-baseline justify-between border-t rule pt-4">
+            <span class="text-[10px] uppercase tracking-[.2em] text-ash">Итого</span>
+            <span id="calcTotal" class="num font-display text-4xl">500 ₽</span>
+          </div>
+          <a id="calcLink" href="https://vk.ru/wildcut21" target="_blank" rel="noopener"
+             class="mt-4 block bg-signal px-4 py-3 text-center font-display text-[12px] uppercase tracking-[.18em] text-coal hover:bg-bone">Открыть диалог в ВК</a>
+          <button id="copyBtn" type="button" class="mt-2 w-full border rule px-4 py-3 font-display text-[11px] uppercase tracking-[.16em] text-bone/70 hover:border-signal hover:text-signal">Скопировать текст записи</button>
+          <p class="mt-3 text-[10px] leading-relaxed text-ash">Кнопка копирует готовое сообщение — его можно вставить в чат барбершопа.</p>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORK -->
+  <section id="work" class="mx-auto max-w-6xl px-5 py-14">
+    <div class="mb-6 flex items-end justify-between">
+      <h2 class="font-display text-4xl uppercase tracking-tight md:text-5xl">Как мы работаем</h2>
+      <a href="https://vk.ru/wildcut21" target="_blank" rel="noopener" class="hidden text-[11px] uppercase tracking-[.18em] text-ash hover:text-signal md:inline">Фото в ВК</a>
+    </div>
+    <div class="grid grid-cols-2 gap-2 md:grid-cols-4">
+      <img src="https://avatars.mds.yandex.net/get-altay/20942336/2a000001a0f55951cd4af9edad423862a08c/XXXL" alt="WildCut, рабочее место барбера" loading="lazy" class="photo aspect-[4/5] w-full object-cover">
+      <img src="https://avatars.mds.yandex.net/get-altay/19753916/2a000001a0a913483a997601aeb05b332e7b/XXXL" alt="WildCut, кресло и зеркало" loading="lazy" class="photo aspect-[4/5] w-full object-cover">
+      <img src="https://avatars.mds.yandex.net/get-altay/20142926/2a000001a0a9134980b863a54cb3930a4ad2/XXXL" alt="WildCut, детали интерьера" loading="lazy" class="photo aspect-[4/5] w-full object-cover">
+      <img src="https://avatars.mds.yandex.net/get-altay/20856454/2a000001a0988d0807092c093c4cb2c7ea64/XXXL" alt="WildCut, зал барбершопа" loading="lazy" class="photo aspect-[4/5] w-full object-cover">
+    </div>
+  </section>
+
+  <!-- CONTACTS -->
+  <section id="contacts" class="border-t rule">
+    <div class="mx-auto grid max-w-6xl gap-8 px-5 py-12 md:grid-cols-3">
+      <div>
+        <p class="text-[10px] uppercase tracking-[.26em] text-ash">Адрес</p>
+        <p class="mt-2 font-display text-2xl uppercase leading-tight">просп. Ленина, 31</p>
+        <p class="text-[13px] text-bone/60">1 этаж · Чебоксары</p>
+        <a href="https://yandex.ru/maps/org/wildcut/232543170335/" target="_blank" rel="noopener" class="mt-3 inline-block text-[12px] uppercase tracking-[.16em] text-signal hover:text-bone">Маршрут →</a>
+      </div>
+      <div>
+        <p class="text-[10px] uppercase tracking-[.26em] text-ash">Часы</p>
+        <p class="mt-2 font-display text-2xl uppercase">10:00 — 20:00</p>
+        <p class="text-[13px] text-bone/60">Ежедневно, без выходных</p>
+      </div>
+      <div>
+        <p class="text-[10px] uppercase tracking-[.26em] text-ash">Связь</p>
+        <a href="tel:+78352215862" class="mt-2 block font-display text-2xl hover:text-signal">+7 (8352) 21-58-62</a>
+        <div class="mt-3 flex flex-wrap gap-2">
+          <a href="https://vk.ru/wildcut21" target="_blank" rel="noopener" class="border rule px-4 py-2 text-[11px] uppercase tracking-[.14em] hover:border-signal hover:text-signal">ВКонтакте</a>
+          <a href="tel:+78352215862" class="border rule px-4 py-2 text-[11px] uppercase tracking-[.14em] hover:border-signal hover:text-signal">Позвонить</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="border-t rule">
+  <div class="mx-auto flex max-w-6xl flex-col gap-2 px-5 py-6 text-[10px] uppercase tracking-[.2em] text-ash md:flex-row md:justify-between">
+    <span>WildCut · Чебоксары · 5,0 ★</span>
+    <span>Демо-концепт сайта · подготовлено для барбершопа WildCut</span>
+  </div>
+</footer>
+
+<script>
+  const options = Array.from(document.querySelectorAll('.option'));
+  const listEl = document.getElementById('calcList');
+  const totalEl = document.getElementById('calcTotal');
+  const linkEl = document.getElementById('calcLink');
+
+  function render() {
+    const masters = options.filter(o => o.dataset.group === 'master' && o.getAttribute('aria-pressed') === 'true');
+    const extras = options.filter(o => !o.dataset.group && o.getAttribute('aria-pressed') === 'true');
+    const all = [...masters, ...extras];
+    const total = all.reduce((s, o) => s + Number(o.dataset.price), 0);
+    listEl.innerHTML = all.map(o => `<li class="flex justify-between gap-3"><span>${o.dataset.label}</span><span class="num">${o.dataset.price} ₽</span></li>`).join('');
+    totalEl.textContent = total.toLocaleString('ru-RU') + ' ₽';
+    window.__msg = 'Здравствуйте! Хочу записаться в WildCut: ' + all.map(o => o.dataset.label + ' (' + o.dataset.price + ' ₽)').join(', ') + '. Итого ' + total + ' ₽. Когда есть свободное время?';
+  }
+
+  options.forEach(o => o.addEventListener('click', () => {
+    const pressed = o.getAttribute('aria-pressed') === 'true';
+    if (o.dataset.group === 'master') {
+      options.filter(x => x.dataset.group === 'master').forEach(x => x.setAttribute('aria-pressed', 'false'));
+      o.setAttribute('aria-pressed', 'true');
+    } else {
+      o.setAttribute('aria-pressed', pressed ? 'false' : 'true');
+    }
+    render();
+  }));
+
+  const copyBtn = document.getElementById('copyBtn');
+  copyBtn.addEventListener('click', async () => {
+    try {
+      await navigator.clipboard.writeText(window.__msg || '');
+      copyBtn.textContent = 'Скопировано ✓';
+      setTimeout(() => { copyBtn.textContent = 'Скопировать текст записи'; }, 2000);
+    } catch {
+      copyBtn.textContent = 'Не удалось скопировать';
+    }
+  });
+  render();
+</script>
+</body>
+</html>
